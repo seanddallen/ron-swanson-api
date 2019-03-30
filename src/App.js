@@ -70,11 +70,11 @@ class App extends Component {
             <div style={{display: 'flex', justifyContent: 'center', marginTop: '40px'}}>
               <form action="" style={{display: 'flex-col'}}>
                 <div style={{width: '15vw', display: 'flex', justifyContent: 'space-between', alignItems: 'space-between'}}>
-                  <input type="radio"/>1
-                  <input type="radio"/>2
-                  <input type="radio"/>3
-                  <input type="radio"/>4
-                  <input type="radio"/>5
+                  <input type="radio" name="vote" value="1"/>1
+                  <input type="radio" name="vote" value="2"/>2
+                  <input type="radio" name="vote" value="3"/>3
+                  <input type="radio" name="vote" value="4"/>4
+                  <input type="radio" name="vote" value="5"/>5
                 </div>
                 <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '20px'}}>
                   <button>Submit</button>
