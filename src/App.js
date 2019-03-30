@@ -5,7 +5,8 @@ import Axios from 'axios';
 class App extends Component {
   
   state = {
-    currentQuote: ""
+    currentQuote: "",
+    inputValue: null
   }
 
   displayRandomQuote = async () => {
@@ -43,6 +44,15 @@ class App extends Component {
     }
     // console.log(response.data[0].split(' '))
   }
+
+  updateInput = (e) => {
+    this.setState({inputValue: e.target.value})  
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(this.state.inputValue)
+  }
   
   render() {
     return (
@@ -70,14 +80,14 @@ class App extends Component {
             <div style={{display: 'flex', justifyContent: 'center', marginTop: '40px'}}>
               <form action="" style={{display: 'flex-col'}}>
                 <div style={{width: '15vw', display: 'flex', justifyContent: 'space-between', alignItems: 'space-between'}}>
-                  <input type="radio" name="vote" value="1"/>1
-                  <input type="radio" name="vote" value="2"/>2
-                  <input type="radio" name="vote" value="3"/>3
-                  <input type="radio" name="vote" value="4"/>4
-                  <input type="radio" name="vote" value="5"/>5
+                  <input type="radio" name="vote" value="1" onClick={this.updateInput}/>1
+                  <input type="radio" name="vote" value="2" onClick={this.updateInput}/>2
+                  <input type="radio" name="vote" value="3" onClick={this.updateInput}/>3
+                  <input type="radio" name="vote" value="4" onClick={this.updateInput}/>4
+                  <input type="radio" name="vote" value="5" onClick={this.updateInput}/>5
                 </div>
                 <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '20px'}}>
-                  <button>Submit</button>
+                  <button onClick={this.handleSubmit}>Submit</button>
                 </div>
                 <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '20px'}}>
                   <h3>Quote Rating: 3/5</h3>
