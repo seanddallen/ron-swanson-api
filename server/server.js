@@ -14,7 +14,7 @@ app.use(express.static("public"));
 require('./config/sessions')(app);
 
 
-var routes_setter = require('./config/routes.js');
+var routes_setter = require('./routes.js');
 routes_setter(app);
 
 app.listen(port, function() {
