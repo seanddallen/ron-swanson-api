@@ -22,8 +22,6 @@ module.exports = function(app){
             "points": req.body.points,
             "average": req.body.average,
 
-
-            "location_id": req.body.location_id,
             "user_id": req.body.user_id,
           })
         res.json(newPost)

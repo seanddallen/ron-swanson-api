@@ -62,11 +62,11 @@ class App extends Component {
         </header>
         <main style={{display: 'flex'}}>
 
-          <div style={{border: '2px solid red', width: '50vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+          <div style={{width: '50vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <img src={require('./images/rs1.png')} alt="ron swanson face" style={{cursor: 'pointer'}} onClick={this.displayRandomQuote} />
           </div>
 
-          <div style={{border: '2px solid green', width: '50vw', height: '100vh', display: 'flex-col'}}>
+          <div style={{width: '50vw', height: '100vh', display: 'flex-col'}}>
             <div style={{display: 'flex', justifyContent: 'center', marginTop: '100px'}}>
               <button style={{cursor: 'pointer', margin: '0px 20px'}} onClick={this.displaySmallQuote}>Small</button>
               <button style={{cursor: 'pointer', margin: '0px 20px'}} onClick={this.displayMediumQuote}>Medium</button>
