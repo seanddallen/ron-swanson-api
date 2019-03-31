@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
 app.use(express.static("public"));
 
-require('./config/sessions')(app);
+// require('./config/sessions')(app);
 
 
 var routes_setter = require('./routes.js');

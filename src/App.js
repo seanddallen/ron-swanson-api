@@ -49,9 +49,15 @@ class App extends Component {
     this.setState({inputValue: e.target.value})  
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(this.state.inputValue)
+    const postedQuote = await Axios.post('http://localhost:8000/newquote', {
+      quote: this.state.currentQuote,
+      points: this.state.inputValue,
+      average: this.state.inputValue,
+    })
+
+    console.log(postedQuote)
   }
   
   render() {
